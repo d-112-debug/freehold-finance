@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freehold Finance — Brand Style Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A1F71;
+    --navy-light: #2A3199;
+    --navy-faint: #eef0fb;
+    --gold: #F7B600;
+    --gold-light: #FFF8E1;
+    --gold-dark: #c49200;
+    --white: #FFFFFF;
+    --cream: #FFF8E1;
+    --ink: #1C1C1C;
+    --muted: #6B7280;
+    --border: #e5e7eb;
+    --surface: #f9fafb;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--surface);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  /* SIDEBAR NAV */
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0;
+    width: 240px;
+    height: 100vh;
+    background: var(--navy);
+    overflow-y: auto;
+    z-index: 100;
+    padding: 0 0 40px;
+  }
+
+  .sidebar-brand {
+    padding: 28px 24px 20px;
+    border-bottom: 0.5px solid rgba(255,255,255,0.1);
+    margin-bottom: 16px;
+  }
+
+  .sidebar-brand .brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    display: block;
+  }
+
+  .sidebar-brand .brand-sub {
+    font-size: 9px;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-top: 2px;
+  }
+
+  .sidebar-brand .guide-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.35);
+    margin-top: 8px;
+    display: block;
+    letter-spacing: 0.06em;
+  }
+
+  .nav-section-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.3);
+    padding: 8px 24px 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+  }
+
+  .sidebar-nav a {
+    display: block;
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    padding: 7px 24px;
+    transition: all 0.15s;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .sidebar-nav a:hover {
+    color: var(--gold);
+    background: rgba(255,255,255,0.05);
+  }
+
+  .sidebar-nav a.active {
+    color: var(--gold);
+    border-left: 2px solid var(--gold);
+    padding-left: 22px;
+  }
+
+  /* MAIN CONTENT */
+  .main-content {
+    margin-left: 240px;
+    min-height: 100vh;
+  }
+
+  /* COVER */
+  .cover {
+    background: var(--navy);
+    padding: 80px 64px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover-bg-text {
+    position: absolute;
+    top: 20px; right: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 140px;
+    font-weight: 600;
+    color: rgba(247,182,0,0.06);
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .cover-eyebrow {
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .cover h1 {
+    font-size: 52px;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .cover h1 span { color: var(--gold); }
+
+  .cover-meta {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    margin-top: 20px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .cover-meta strong { color: rgba(255,255,255,0.75); font-weight: 400; }
+
+  /* SECTION WRAPPER */
+  .section-wrap {
+    padding: 56px 64px;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .section-wrap:last-child { border-bottom: none; }
+
+  .section-number {
+    font-size: 11px;
+    color: var(--gold);
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .section-title {
+    font-size: 32px;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .section-desc {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 560px;
+    margin-bottom: 40px;
+  }
+
+  .divider {
+    border: none;
+    border-top: 0.5px solid var(--border);
+    margin: 40px 0;
+  }
+
+  /* COLOUR SWATCHES */
+  .swatch-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 0.5px solid var(--border);
+  }
+
+  .swatch-block {
+    height: 100px;
+  }
+
+  .swatch-info {
+    padding: 14px 16px;
+    background: #fff;
+  }
+
+  .swatch-role {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 3px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .swatch-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .swatch-hex {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'Courier New', monospace;
+  }
+
+  .swatch-usage {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  /* COLOUR USAGE PILLS */
+  .usage-demo {
+    border-radius: 10px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border: 0.5px solid var(--border);
+  }
+
+  /* TYPOGRAPHY */
+  .type-specimen {
+    background: #fff;
+    border: 0.5px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 16px;
+  }
+
+  .type-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 10px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .type-meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 10px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* LOGO SECTION */
+  .logo-placeholder {
+    background: #fff;
+    border: 1.5px dashed var(--border);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 40px 24px;
+    min-height: 160px;
+    text-align: center;
+  }
+
+  .logo-placeholder.dark {
+    background: var(--navy);
+    border-color: rgba(255,255,255,0.15);
+  }
+
+  .logo-placeholder .designer-note {
+    font-size: 12px;
+    color: var(--muted);
+    max-width: 200px;
+    line-height: 1.5;
+  }
+
+  .logo-placeholder.dark .designer-note { color: rgba(255,255,255,0.4); }
+
+  .placeholder-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: var(--navy-faint);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .placeholder-icon.gold-bg {
+    background: var(--gold-light);
+  }
+
+  .logo-spec-table {
+    background: #fff;
+    border: 0.5px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .logo-spec-table table {
+    width: 100%;
+    margin: 0;
+  }
+
+  .logo-spec-table td {
+    padding: 12px 20px;
+    font-size: 13px;
+    border-bottom: 0.5px solid var(--border);
+    vertical-align: top;
+  }
+
+  .logo-spec-table td:first-child {
+    width: 40%;
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .logo-spec-table tr:last-child td { border-bottom: none; }
+
+  /* BUSINESS CARD */
+  .biz-card {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 1.75;
+    border-radius: 14px;
+    background: var(--navy);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .biz-card-back {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 1.75;
+    border-radius: 14px;
+    background: var(--gold);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-stage {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 32px;
+    border: 0.5px solid var(--border);
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* HOMEPAGE MOCKUP */
+  .browser-frame {
+    border-radius: 12px;
+    border: 0.5px solid var(--border);
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(26,31,113,0.08);
+  }
+
+  .browser-bar {
+    background: var(--surface);
+    border-bottom: 0.5px solid var(--border);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .browser-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+  }
+
+  .browser-url {
+    flex: 1;
+    background: #fff;
+    border: 0.5px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 11px;
+    color: var(--muted);
+    margin: 0 10px;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .site-nav-mock {
+    background: var(--navy);
+    padding: 0 32px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-mock {
+    background: var(--navy);
+    padding: 44px 32px 36px;
+  }
+
+  .hero-eyebrow {
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #fff;
+    line-height: 1.25;
+    max-width: 400px;
+    margin-bottom: 10px;
+  }
+
+  .hero-headline span { color: var(--gold); }
+
+  .hero-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    max-width: 360px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .btn-primary-mock {
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: default;
+    font-family: 'DM Sans', sans-serif;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .btn-sec-mock {
+    background: transparent;
+    color: #fff;
+    font-size: 13px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.25);
+    cursor: default;
+    font-family: 'DM Sans', sans-serif;
+    display: inline-block;
+  }
+
+  .hero-stats-row {
+    display: flex;
+    gap: 28px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 0.5px solid rgba(255,255,255,0.12);
+  }
+
+  .stat-val { font-size: 20px; font-weight: 500; color: var(--gold); font-family: 'DM Sans', sans-serif; }
+  .stat-lab { font-size: 10px; color: rgba(255,255,255,0.5); font-family: 'DM Sans', sans-serif; margin-top: 2px; }
+
+  .services-mock {
+    background: #fff;
+    padding: 28px 32px;
+  }
+
+  .services-grid-mock {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .service-card-mock {
+    border: 0.5px solid rgba(26,31,113,0.12);
+    border-radius: 10px;
+    padding: 16px;
+  }
+
+  .service-icon-mock {
+    width: 30px; height: 30px;
+    background: var(--gold-light);
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .service-name-mock {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 4px;
+  }
+
+  .service-desc-mock {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.5;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .cta-strip-mock {
+    background: var(--gold);
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-footer-mock {
+    background: var(--navy);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* BRAND VOICE */
+  .voice-card {
+    background: #fff;
+    border: 0.5px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    height: 100%;
+  }
+
+  .voice-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 14px;
+    font-size: 18px;
+  }
+
+  .voice-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .voice-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .voice-example {
+    background: var(--navy-faint);
+    border-left: 3px solid var(--navy);
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    color: var(--navy);
+    font-style: italic;
+  }
+
+  .do-dont {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
+  .pill {
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .pill-do { background: #ecfdf5; color: #065f46; }
+  .pill-dont { background: #fef2f2; color: #991b1b; }
+
+  /* DOMAINS */
+  .domain-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 0.5px solid var(--border);
+    background: #fff;
+  }
+
+  .domain-row:first-child { border-radius: 12px 12px 0 0; }
+  .domain-row:last-child { border-bottom: none; border-radius: 0 0 12px 12px; }
+
+  .domain-name-text { font-size: 14px; font-weight: 500; color: var(--ink); font-family: 'Courier New', monospace; }
+  .domain-note { font-size: 12px; color: var(--muted); margin-top: 2px; font-family: 'DM Sans', sans-serif; }
+
+  .badge-best { background: #ecfdf5; color: #065f46; font-size: 11px; padding: 3px 10px; border-radius: 20px; font-family: 'DM Sans', sans-serif; font-weight: 500; }
+  .badge-good { background: var(--navy-faint); color: var(--navy); font-size: 11px; padding: 3px 10px; border-radius: 20px; font-family: 'DM Sans', sans-serif; font-weight: 500; }
+  .badge-alt  { background: #f3f4f6; color: #374151; font-size: 11px; padding: 3px 10px; border-radius: 20px; font-family: 'DM Sans', sans-serif; font-weight: 500; }
+
+  /* NAMES TABLE */
+  .names-table { background: #fff; border: 0.5px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .names-table table { width: 100%; margin: 0; }
+  .names-table td { padding: 14px 20px; font-size: 14px; border-bottom: 0.5px solid var(--border); }
+  .names-table td:first-child { width: 35%; font-size: 12px; color: var(--muted); font-family: 'DM Sans', sans-serif; }
+  .names-table td:nth-child(2) { font-weight: 500; color: var(--navy); }
+  .names-table td:last-child { font-size: 12px; color: var(--muted); }
+  .names-table tr:last-child td { border-bottom: none; }
+
+  /* TAGLINE */
+  .tagline-hero {
+    background: var(--navy);
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .tagline-hero .tagline-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  .tagline-hero .tagline-text span { color: var(--gold); }
+
+  .tagline-hero .tagline-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* FOOTER NOTE */
+  .doc-footer {
+    background: var(--navy);
+    padding: 32px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .doc-footer p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* PRINT */
+  @media print {
+    .sidebar { display: none; }
+    .main-content { margin-left: 0; }
+  }
+
+  @media (max-width: 768px) {
+    .sidebar { display: none; }
+    .main-content { margin-left: 0; }
+    .section-wrap { padding: 40px 24px; }
+    .cover { padding: 48px 24px; }
+    .cover h1 { font-size: 36px; }
+    .doc-footer { padding: 24px; flex-direction: column; gap: 8px; text-align: center; }
+  }
+
+  .info-box {
+    background: var(--navy-faint);
+    border-left: 3px solid var(--navy);
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+
+  .gold-box {
+    background: var(--gold-light);
+    border-left: 3px solid var(--gold);
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    color: #7a5a00;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-brand">
+    <span class="brand-name">Freehold</span>
+    <span class="brand-sub">FINANCE</span>
+    <span class="guide-label">Brand Style Guide · 2026</span>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-label">Document</div>
+    <a href="#cover">Overview</a>
+    <div class="nav-section-label">Identity</div>
+    <a href="#names">Business names</a>
+    <a href="#colours">Colour palette</a>
+    <a href="#typography">Typography</a>
+    <a href="#logomark">Logomark</a>
+    <a href="#wordmark">Wordmark</a>
+    <div class="nav-section-label">Brand</div>
+    <a href="#tagline">Tagline &amp; voice</a>
+    <a href="#domains">Domains</a>
+    <div class="nav-section-label">Applications</div>
+    <a href="#businesscard">Business card</a>
+    <a href="#homepage">Homepage</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="main-content">
+
+  <!-- COVER -->
+  <section class="cover" id="cover">
+    <div class="cover-bg-text">FF</div>
+    <div class="cover-eyebrow">Brand Style Guide · Version 1.0</div>
+    <h1>Freehold <span>Finance</span></h1>
+    <div class="cover-meta">
+      Prepared for <strong>Anup Shrestha</strong> &nbsp;·&nbsp; Founder &amp; Director &nbsp;·&nbsp;
+      Freehold Finance Pty Ltd &nbsp;·&nbsp; Brisbane, Australia &nbsp;·&nbsp; 2026
+    </div>
+  </section>
+
+  <!-- BUSINESS NAMES -->
+  <section class="section-wrap" id="names">
+    <span class="section-number">01 — Business Names</span>
+    <h2 class="section-title">Brand naming structure</h2>
+    <p class="section-desc">The official naming hierarchy for legal, trading and digital use across all client-facing touchpoints.</p>
+
+    <div class="names-table">
+      <table>
+        <tr>
+          <td>Legal company name</td>
+          <td>Freehold Finance Pty Ltd</td>
+          <td>For ASIC registration, contracts and legal documents</td>
+        </tr>
+        <tr>
+          <td>Trading name</td>
+          <td>Freehold Finance</td>
+          <td>All client-facing materials, signage and marketing</td>
+        </tr>
+        <tr>
+          <td>Short brand handle</td>
+          <td>Freehold</td>
+          <td>Social media handles, app store, informal brand shorthand</td>
+        </tr>
+        <tr>
+          <td>Founder &amp; Director</td>
+          <td>Anup Shrestha</td>
+          <td>Use on business cards, email signatures and bio profiles</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="info-box mt-4">
+      Always use the full trading name <strong>Freehold Finance</strong> on first reference in any document or marketing piece. Short form <strong>Freehold</strong> may be used on subsequent references.
+    </div>
+  </section>
+
+  <!-- COLOUR PALETTE -->
+  <section class="section-wrap" id="colours">
+    <span class="section-number">02 — Colour Palette</span>
+    <h2 class="section-title">Brand colours</h2>
+    <p class="section-desc">A two-colour primary palette of deep navy and vibrant gold, supported by neutral tones for text and backgrounds. These colours must be used consistently across all brand materials.</p>
+
+    <div class="row g-3 mb-4">
+      <div class="col-md-4">
+        <div class="swatch-card">
+          <div class="swatch-block" style="background:#1A1F71;"></div>
+          <div class="swatch-info">
+            <div class="swatch-role">Primary · Brand navy</div>
+            <div class="swatch-name">Deep navy</div>
+            <div class="swatch-hex">#1A1F71 &nbsp;·&nbsp; RGB 26, 31, 113</div>
+            <div class="swatch-usage">Primary brand colour. Use for headers, navbars, buttons, backgrounds and key UI elements. Conveys authority, trust and financial credibility.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="swatch-card">
+          <div class="swatch-block" style="background:#F7B600;"></div>
+          <div class="swatch-info">
+            <div class="swatch-role">Secondary · Brand gold</div>
+            <div class="swatch-name">Title gold</div>
+            <div class="swatch-hex">#F7B600 &nbsp;·&nbsp; RGB 247, 182, 0</div>
+            <div class="swatch-usage">Accent and call-to-action colour. Use for highlights, CTA buttons, key text accents and decorative elements. Evokes prosperity and premium positioning.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="swatch-card">
+          <div class="swatch-block" style="background:#2A3199;"></div>
+          <div class="swatch-info">
+            <div class="swatch-role">Tertiary · Hover state</div>
+            <div class="swatch-name">Royal blue</div>
+            <div class="swatch-hex">#2A3199 &nbsp;·&nbsp; RGB 42, 49, 153</div>
+            <div class="swatch-usage">Used for hover and active states on navy elements. Maintains brand consistency while providing clear interactive feedback.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="swatch-card">
+          <div class="swatch-block" style="background:#FFF8E1; border-bottom: 0.5px solid #e5e7eb;"></div>
+          <div class="swatch-info">
+            <div class="swatch-role">Support · Warm background</div>
+            <div class="swatch-name">Cream</div>
+            <div class="swatch-hex">#FFF8E1</div>
+            <div class="swatch-usage">Section backgrounds, card tints and warm surface areas.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="swatch-card">
+          <div class="swatch-block" style="background:#FFFFFF; border-bottom: 0.5px solid #e5e7eb;"></div>
+          <div class="swatch-info">
+            <div class="swatch-role">Support · Clean surface</div>
+            <div class="swatch-name">White</div>
+            <div class="swatch-hex">#FFFFFF</div>
+            <div class="swatch-usage">Primary page and card backgrounds. Body content areas.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="swatch-card">
+          <div class="swatch-block" style="background:#1C1C1C;"></div>
+          <div class="swatch-info">
+            <div class="swatch-role">Support · Body text</div>
+            <div class="swatch-name">Near black</div>
+            <div class="swatch-hex">#1C1C1C</div>
+            <div class="swatch-usage">Primary body text on white backgrounds.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="swatch-card">
+          <div class="swatch-block" style="background:#6B7280;"></div>
+          <div class="swatch-info">
+            <div class="swatch-role">Support · Secondary text</div>
+            <div class="swatch-name">Slate grey</div>
+            <div class="swatch-hex">#6B7280</div>
+            <div class="swatch-usage">Subtext, captions, labels and supporting copy.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <h5 style="font-family:'DM Sans',sans-serif; font-weight:500; color:var(--navy); margin-bottom:16px;">Colour usage rules</h5>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="usage-demo" style="background:var(--navy);">
+          <div>
+            <div style="font-size:13px;color:#fff;font-weight:500;">White text on navy</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.55);margin-top:2px;">Headers, navigation, hero sections</div>
+          </div>
+          <div style="background:var(--gold);color:var(--navy);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Correct</div>
+        </div>
+        <div class="usage-demo" style="background:var(--gold);">
+          <div>
+            <div style="font-size:13px;color:var(--navy);font-weight:500;">Navy text on gold</div>
+            <div style="font-size:11px;color:rgba(26,31,113,0.6);margin-top:2px;">CTA buttons, highlight strips</div>
+          </div>
+          <div style="background:var(--navy);color:#fff;font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Correct</div>
+        </div>
+        <div class="usage-demo" style="background:#fff;">
+          <div>
+            <div style="font-size:13px;color:var(--navy);font-weight:500;">Navy text on white</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px;">Body content, cards, forms</div>
+          </div>
+          <div style="background:#ecfdf5;color:#065f46;font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Correct</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="gold-box">
+          <strong>Never</strong> place gold text on white — contrast is too low for accessibility. Gold is exclusively used on navy backgrounds or as a background colour itself.
+        </div>
+        <div class="info-box">
+          <strong>Minimum contrast:</strong> All text must meet WCAG AA contrast ratio of 4.5:1 for body text. Navy on white (#1A1F71 on #FFFFFF) achieves 12.5:1 — well above requirement.
+        </div>
+        <div style="background:#fef2f2;border-left:3px solid #ef4444;padding:14px 18px;border-radius:0 8px 8px 0;font-size:13px;color:#991b1b;">
+          <strong>Avoid:</strong> Yellow/gold text on white backgrounds, navy on dark backgrounds without sufficient contrast, or introducing off-brand colours.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPOGRAPHY -->
+  <section class="section-wrap" id="typography">
+    <span class="section-number">03 — Typography</span>
+    <h2 class="section-title">Type system</h2>
+    <p class="section-desc">Two typefaces work together: a classic serif for headlines and brand moments, and a clean geometric sans for body copy and UI elements.</p>
+
+    <div class="row g-3 mb-4">
+      <div class="col-md-6">
+        <div class="type-specimen">
+          <div class="type-label">Display font — Playfair Display</div>
+          <div style="font-family:'Playfair Display',serif; font-size:36px; color:var(--navy); line-height:1.15;">Own it.<br>For real.</div>
+          <div class="type-meta">Playfair Display · Weights: 400, 500, 600 · Google Fonts (free)</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:10px;line-height:1.6;">Use for: H1 headings, brand tagline, hero text, section titles, pull quotes. Conveys premium, established and trustworthy character.</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="type-specimen">
+          <div class="type-label">Body font — DM Sans</div>
+          <div style="font-family:'DM Sans',sans-serif; font-size:16px; color:var(--ink); line-height:1.7;">We help Australians buy their first home, refinance smarter, and grow their property portfolio — with access to 40+ lenders and zero broker fees.</div>
+          <div class="type-meta">DM Sans · Weights: 300, 400, 500 · Google Fonts (free)</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:10px;line-height:1.6;">Use for: body copy, UI labels, navigation, buttons, captions, forms. Clean and legible at all sizes.</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <h5 style="font-family:'DM Sans',sans-serif; font-weight:500; color:var(--navy); margin-bottom:16px;">Type scale</h5>
+    <div class="type-specimen">
+      <table style="width:100%; font-size:13px; color:var(--muted); border-collapse:collapse;">
+        <thead>
+          <tr style="border-bottom:0.5px solid var(--border);">
+            <th style="padding:8px 0;font-weight:500;color:var(--ink);text-align:left;">Style</th>
+            <th style="padding:8px 0;font-weight:500;color:var(--ink);text-align:left;">Font</th>
+            <th style="padding:8px 0;font-weight:500;color:var(--ink);text-align:left;">Size</th>
+            <th style="padding:8px 0;font-weight:500;color:var(--ink);text-align:left;">Weight</th>
+            <th style="padding:8px 0;font-weight:500;color:var(--ink);text-align:left;">Preview</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:0.5px solid var(--border);">
+            <td style="padding:12px 0;">H1 — Hero</td>
+            <td>Playfair Display</td><td>48–64px</td><td>500</td>
+            <td style="font-family:'Playfair Display',serif;font-size:28px;color:var(--navy);">Freehold Finance</td>
+          </tr>
+          <tr style="border-bottom:0.5px solid var(--border);">
+            <td style="padding:12px 0;">H2 — Section</td>
+            <td>Playfair Display</td><td>32–40px</td><td>500</td>
+            <td style="font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);">Own your home</td>
+          </tr>
+          <tr style="border-bottom:0.5px solid var(--border);">
+            <td style="padding:12px 0;">H3 — Subsection</td>
+            <td>Playfair Display</td><td>22–28px</td><td>400</td>
+            <td style="font-family:'Playfair Display',serif;font-size:18px;color:var(--navy);">First home buyers</td>
+          </tr>
+          <tr style="border-bottom:0.5px solid var(--border);">
+            <td style="padding:12px 0;">Body large</td>
+            <td>DM Sans</td><td>16px</td><td>400</td>
+            <td style="font-family:'DM Sans',sans-serif;font-size:15px;color:var(--ink);">We work for you, not the bank.</td>
+          </tr>
+          <tr style="border-bottom:0.5px solid var(--border);">
+            <td style="padding:12px 0;">Body regular</td>
+            <td>DM Sans</td><td>14px</td><td>400</td>
+            <td style="font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);">Access 40+ lenders with zero broker fees.</td>
+          </tr>
+          <tr style="border-bottom:0.5px solid var(--border);">
+            <td style="padding:12px 0;">Caption / label</td>
+            <td>DM Sans</td><td>11–12px</td><td>400–500</td>
+            <td style="font-family:'DM Sans',sans-serif;font-size:11px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;">Mortgage brokerage · Brisbane</td>
+          </tr>
+          <tr>
+            <td style="padding:12px 0;">Button</td>
+            <td>DM Sans</td><td>13–14px</td><td>500</td>
+            <td><span style="background:var(--navy);color:#fff;padding:6px 16px;border-radius:6px;font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;">Get started</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- LOGOMARK -->
+  <section class="section-wrap" id="logomark">
+    <span class="section-number">04 — Logomark</span>
+    <h2 class="section-title">The logomark</h2>
+    <p class="section-desc">The logomark is a standalone icon — used as a favicon, app icon, avatar, and in contexts where space is limited. It must work without the wordmark at small sizes.</p>
+
+    <div class="info-box">
+      <strong>Designer brief:</strong> The logomark concept is a <strong>house silhouette with a golden door</strong>. The house shape is clean and geometric (not illustrative). The door inset uses the gold accent colour. This combination communicates "property" and "ownership" immediately, while the navy/gold palette delivers financial credibility. See spec table below for details.
+    </div>
+
+    <div class="row g-3 mb-4">
+      <div class="col-md-3">
+        <p class="card-label">On white</p>
+        <div class="logo-placeholder">
+          <div class="placeholder-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28">
+              <polygon points="14,2 24,10 24,26 4,26 4,10" fill="#1A1F71"/>
+              <rect x="9" y="16" width="10" height="10" rx="1" fill="#F7B600"/>
+            </svg>
+          </div>
+          <div class="designer-note" style="font-size:11px;color:var(--muted);">Logomark placeholder · Designer to develop final artwork</div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <p class="card-label">On navy</p>
+        <div class="logo-placeholder dark">
+          <div class="placeholder-icon gold-bg">
+            <svg width="28" height="28" viewBox="0 0 28 28">
+              <polygon points="14,2 24,10 24,26 4,26 4,10" fill="#1A1F71"/>
+              <rect x="9" y="16" width="10" height="10" rx="1" fill="#F7B600"/>
+            </svg>
+          </div>
+          <div class="designer-note">Reversed logomark · White house, gold door on navy</div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <p class="card-label">Monochrome dark</p>
+        <div class="logo-placeholder">
+          <div class="placeholder-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28">
+              <polygon points="14,2 24,10 24,26 4,26 4,10" fill="#1C1C1C"/>
+              <rect x="9" y="16" width="10" height="10" rx="1" fill="#1C1C1C" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="designer-note" style="font-size:11px;color:var(--muted);">Single colour version for fax, print, emboss</div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <p class="card-label">Favicon size (32px)</p>
+        <div class="logo-placeholder" style="min-height:100px;">
+          <svg width="32" height="32" viewBox="0 0 28 28" style="border-radius:6px;">
+            <rect width="28" height="28" fill="#1A1F71"/>
+            <polygon points="14,3 23,10 23,25 5,25 5,10" fill="#fff"/>
+            <rect x="9" y="15" width="10" height="10" rx="1" fill="#F7B600"/>
+          </svg>
+          <div class="designer-note" style="font-size:11px;color:var(--muted);">Favicon · Navy background, white house, gold door</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <h5 style="font-family:'DM Sans',sans-serif; font-weight:500; color:var(--navy); margin-bottom:16px;">Logomark specification</h5>
+    <div class="logo-spec-table">
+      <table>
+        <tr><td>Concept</td><td colspan="2">Geometric house silhouette with a rectangular door cutout in brand gold. The door represents the threshold to ownership — the core promise of Freehold Finance.</td></tr>
+        <tr><td>Shape</td><td colspan="2">Pentagon (house) — flat roof line, symmetrical, no decorative detail. Clean geometric form that scales to 16px without losing legibility.</td></tr>
+        <tr><td>Door element</td><td colspan="2">Centred rectangle inset at base of house shape, sized approximately 35% of house width. Filled with brand gold #F7B600. Represents entry, access and ownership.</td></tr>
+        <tr><td>Primary colours</td><td colspan="2">House: #1A1F71 (deep navy) · Door: #F7B600 (title gold)</td></tr>
+        <tr><td>Reversed version</td><td colspan="2">House: #FFFFFF · Door: #F7B600 · Background: #1A1F71</td></tr>
+        <tr><td>Minimum size</td><td colspan="2">16px × 16px (favicon). Below this size, use initials "FF" mark instead.</td></tr>
+        <tr><td>Clear space</td><td colspan="2">Minimum clear space = 50% of the icon height on all sides. Never crowd the logomark with other elements.</td></tr>
+        <tr><td>File formats required</td><td colspan="2">SVG (primary), PNG @1x @2x @3x, ICO (favicon), PDF (print)</td></tr>
+        <tr><td>Designer note</td><td colspan="2">The placeholder SVG in this guide is a rough directional sketch only. Final logomark must be professionally drawn with optical corrections, refined proportions and vector precision.</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- WORDMARK -->
+  <section class="section-wrap" id="wordmark">
+    <span class="section-number">05 — Wordmark</span>
+    <h2 class="section-title">The wordmark</h2>
+    <p class="section-desc">The wordmark combines the brand name in a typographic lockup. It is used alongside the logomark in horizontal or stacked arrangements, and standalone where the icon is not appropriate.</p>
+
+    <div class="info-box">
+      <strong>Designer brief:</strong> The wordmark uses <strong>Playfair Display</strong> (serif) for "Freehold" and a small-caps or tracked version of <strong>DM Sans</strong> for "FINANCE". The two-line treatment creates visual hierarchy — the brand name is prominent, the descriptor reads as a subtitle. The wordmark must be supplied in full colour, reversed (on navy), and monochrome versions.
+    </div>
+
+    <div class="row g-3 mb-4">
+      <div class="col-md-4">
+        <p class="card-label">Horizontal lockup</p>
+        <div class="logo-placeholder" style="gap:6px;">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div class="placeholder-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28">
+                <polygon points="14,2 24,10 24,26 4,26 4,10" fill="#1A1F71"/>
+                <rect x="9" y="16" width="10" height="10" rx="1" fill="#F7B600"/>
+              </svg>
+            </div>
+            <div>
+              <div style="font-family:'Playfair Display',serif;font-size:20px;color:var(--navy);font-weight:500;line-height:1;">Freehold</div>
+              <div style="font-family:'DM Sans',sans-serif;font-size:9px;color:var(--gold);letter-spacing:0.22em;margin-top:2px;">FINANCE</div>
+            </div>
+          </div>
+          <div class="designer-note" style="font-size:11px;color:var(--muted);text-align:center;">Icon left · Text right · Primary lockup</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <p class="card-label">Stacked lockup</p>
+        <div class="logo-placeholder" style="gap:8px;">
+          <div class="placeholder-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28">
+              <polygon points="14,2 24,10 24,26 4,26 4,10" fill="#1A1F71"/>
+              <rect x="9" y="16" width="10" height="10" rx="1" fill="#F7B600"/>
+            </svg>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--navy);font-weight:500;">Freehold</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:8px;color:var(--gold);letter-spacing:0.22em;">FINANCE</div>
+          </div>
+          <div class="designer-note" style="font-size:11px;color:var(--muted);text-align:center;">Icon top · Text below · For square formats</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <p class="card-label">Reversed on navy</p>
+        <div class="logo-placeholder dark" style="gap:6px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:32px;height:32px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 28 28">
+                <polygon points="14,2 24,10 24,26 4,26 4,10" fill="#fff"/>
+                <rect x="9" y="16" width="10" height="10" rx="1" fill="#F7B600"/>
+              </svg>
+            </div>
+            <div>
+              <div style="font-family:'Playfair Display',serif;font-size:18px;color:#fff;font-weight:500;">Freehold</div>
+              <div style="font-family:'DM Sans',sans-serif;font-size:8px;color:var(--gold);letter-spacing:0.22em;">FINANCE</div>
+            </div>
+          </div>
+          <div class="designer-note">White wordmark on navy · For dark backgrounds</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <h5 style="font-family:'DM Sans',sans-serif; font-weight:500; color:var(--navy); margin-bottom:16px;">Wordmark specification</h5>
+    <div class="logo-spec-table">
+      <table>
+        <tr><td>Primary typeface</td><td colspan="2">"Freehold" in Playfair Display, weight 500. Proportional serif letterforms communicate heritage and trust.</td></tr>
+        <tr><td>Secondary typeface</td><td colspan="2">"FINANCE" in DM Sans, weight 500, all-caps, tracked at +200 letter-spacing. Small and subordinate to the brand name.</td></tr>
+        <tr><td>Colour — full</td><td colspan="2">"Freehold": #1A1F71 (navy) · "FINANCE": #F7B600 (gold)</td></tr>
+        <tr><td>Colour — reversed</td><td colspan="2">"Freehold": #FFFFFF · "FINANCE": #F7B600 · On navy background</td></tr>
+        <tr><td>Colour — mono</td><td colspan="2">Both elements in #1C1C1C or #FFFFFF depending on background</td></tr>
+        <tr><td>Lockup spacing</td><td colspan="2">In horizontal lockup: 12px gap between icon and text column. "FINANCE" sits 4px below "Freehold" baseline.</td></tr>
+        <tr><td>Do not</td><td colspan="2">Do not stretch, skew, recolour, or rearrange the wordmark elements. Do not use Freehold without Finance in formal brand contexts. Do not use a different typeface.</td></tr>
+        <tr><td>File formats required</td><td colspan="2">SVG (primary), PNG @1x @2x @3x (transparent background), PDF (print-ready)</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- TAGLINE & VOICE -->
+  <section class="section-wrap" id="tagline">
+    <span class="section-number">06 — Tagline &amp; Brand Voice</span>
+    <h2 class="section-title">Tagline &amp; brand voice</h2>
+    <p class="section-desc">How Freehold Finance speaks — the words we use, the tone we strike, and the feeling we leave clients with.</p>
+
+    <div class="tagline-hero">
+      <div class="tagline-text">Own it. <span>For real.</span></div>
+      <div class="tagline-sub">The official brand tagline</div>
+    </div>
+
+    <div class="info-box">
+      <strong>Tagline rationale:</strong> "Own it. For real." plays on the legal meaning of freehold — full, unconditional property ownership. It is punchy, confident and direct. "For real" adds an authenticity edge, signalling that Freehold Finance cuts through jargon and delivers genuine outcomes. Use it on all primary brand materials including business cards, homepage hero, email signatures and marketing campaigns.
+    </div>
+
+    <hr class="divider">
+
+    <h5 style="font-family:'DM Sans',sans-serif; font-weight:500; color:var(--navy); margin-bottom:20px;">Brand voice pillars</h5>
+    <div class="row g-3 mb-4">
+      <div class="col-md-4">
+        <div class="voice-card">
+          <div class="voice-icon" style="background:var(--navy-faint);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A1F71" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="voice-title">Clear &amp; direct</div>
+          <div class="voice-desc">We say what we mean. No jargon, no fine print buried in complexity. Clients should walk away understanding exactly what they're getting.</div>
+          <div class="voice-example">"We compared 40 lenders and found you a rate 0.6% lower than your current one."</div>
+          <div class="do-dont">
+            <span class="pill pill-do">Plain language</span>
+            <span class="pill pill-do">Specific numbers</span>
+            <span class="pill pill-dont">Banking jargon</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="voice-card">
+          <div class="voice-icon" style="background:var(--gold-light);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c49200" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="voice-title">Confident &amp; grounded</div>
+          <div class="voice-desc">We are experts at what we do. We speak with authority — not arrogance. We back our advice with evidence and stand behind our recommendations.</div>
+          <div class="voice-example">"This is the right loan structure for your situation — here's exactly why."</div>
+          <div class="do-dont">
+            <span class="pill pill-do">Assertive</span>
+            <span class="pill pill-do">Evidence-based</span>
+            <span class="pill pill-dont">Wishy-washy</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="voice-card">
+          <div class="voice-icon" style="background:#ecfdf5;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#065f46" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="voice-title">Human &amp; approachable</div>
+          <div class="voice-desc">Buying property is one of the biggest decisions of someone's life. We treat every client like a real person, not a transaction number.</div>
+          <div class="voice-example">"Buying your first home is exciting — and a little overwhelming. That's completely normal. Let's break it down together."</div>
+          <div class="do-dont">
+            <span class="pill pill-do">Empathetic</span>
+            <span class="pill pill-do">Personal</span>
+            <span class="pill pill-dont">Corporate-cold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <h5 style="font-family:'DM Sans',sans-serif; font-weight:500; color:var(--navy); margin-bottom:16px;">Tone of voice — do &amp; don't</h5>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div style="background:#ecfdf5;border-radius:12px;padding:20px 24px;">
+          <div style="font-size:12px;color:#065f46;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;">Write like this</div>
+          <ul style="font-size:13px;color:#065f46;line-height:2;padding-left:18px;margin:0;">
+            <li>"We work for you — not the bank."</li>
+            <li>"Get approved in as little as 24 hours."</li>
+            <li>"We'll find your lowest rate, guaranteed."</li>
+            <li>"No broker fees. Ever."</li>
+            <li>"Own it. For real."</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div style="background:#fef2f2;border-radius:12px;padding:20px 24px;">
+          <div style="font-size:12px;color:#991b1b;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;">Avoid this</div>
+          <ul style="font-size:13px;color:#991b1b;line-height:2;padding-left:18px;margin:0;">
+            <li>"Pursuant to our assessment framework..."</li>
+            <li>"Leverage our synergistic lender panel..."</li>
+            <li>"We facilitate optimal debt structuring..."</li>
+            <li>"Subject to credit approval and eligibility..."</li>
+            <li>Excessive exclamation marks!!!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOMAINS -->
+  <section class="section-wrap" id="domains">
+    <span class="section-number">07 — Digital &amp; Domains</span>
+    <h2 class="section-title">Domain &amp; digital handles</h2>
+    <p class="section-desc">Secure all primary domain names and social handles immediately upon brand registration. Consistency across digital touchpoints is critical for brand trust.</p>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h5 style="font-family:'DM Sans',sans-serif; font-weight:500; color:var(--navy); margin-bottom:14px;">Domain names</h5>
+        <div style="border:0.5px solid var(--border);border-radius:12px;overflow:hidden;">
+          <div class="domain-row">
+            <div>
+              <div class="domain-name-text">freeholdfinance.com.au</div>
+              <div class="domain-note">Primary website · Register first priority</div>
+            </div>
+            <span class="badge-best">Priority</span>
+          </div>
+          <div class="domain-row">
+            <div>
+              <div class="domain-name-text">freeholdfinance.com</div>
+              <div class="domain-note">International — secure to protect brand</div>
+            </div>
+            <span class="badge-good">Secure</span>
+          </div>
+          <div class="domain-row">
+            <div>
+              <div class="domain-name-text">freehold.finance</div>
+              <div class="domain-note">Modern domain extension — great for campaigns</div>
+            </div>
+            <span class="badge-good">Modern</span>
+          </div>
+          <div class="domain-row">
+            <div>
+              <div class="domain-name-text">getfreehold.com.au</div>
+              <div class="domain-note">Campaign / redirect URL backup</div>
+            </div>
+            <span class="badge-alt">Backup</span>
+          </div>
+          <div class="domain-row">
+            <div>
+              <div class="domain-name-text">freeholdfi.com.au</div>
+              <div class="domain-note">Short-form backup domain</div>
+            </div>
+            <span class="badge-alt">Backup</span>
+          </div>
+        </div>
+        <div class="info-box mt-3">Register .com.au domains at <strong>auda.org.au</strong> registrars. You must hold an ABN to register .com.au domains.</div>
+      </div>
+
+      <div class="col-md-6">
+        <h5 style="font-family:'DM Sans',sans-serif; font-weight:500; color:var(--navy); margin-bottom:14px;">Social handles to secure</h5>
+        <div style="border:0.5px solid var(--border);border-radius:12px;overflow:hidden;">
+          <div class="domain-row">
+            <div>
+              <div class="domain-name-text">@freeholdfinance</div>
+              <div class="domain-note">Instagram · Facebook · LinkedIn · X (Twitter)</div>
+            </div>
+            <span class="badge-best">Primary</span>
+          </div>
+          <div class="domain-row">
+            <div>
+              <div class="domain-name-text">@freehold.finance</div>
+              <div class="domain-note">TikTok · YouTube · Threads</div>
+            </div>
+            <span class="badge-good">Alternate</span>
+          </div>
+          <div class="domain-row">
+            <div>
+              <div class="domain-name-text">freehold-finance</div>
+              <div class="domain-note">LinkedIn company page URL slug</div>
+            </div>
+            <span class="badge-good">LinkedIn</span>
+          </div>
+        </div>
+
+        <h5 style="font-family:'DM Sans',sans-serif; font-weight:500; color:var(--navy); margin:24px 0 14px;">Email format</h5>
+        <div style="border:0.5px solid var(--border);border-radius:12px;overflow:hidden;">
+          <div class="domain-row">
+            <div>
+              <div class="domain-name-text">anup@freeholdfinance.com.au</div>
+              <div class="domain-note">Founder / director primary email</div>
+            </div>
+          </div>
+          <div class="domain-row">
+            <div>
+              <div class="domain-name-text">hello@freeholdfinance.com.au</div>
+              <div class="domain-note">General enquiries inbox</div>
+            </div>
+          </div>
+          <div class="domain-row">
+            <div>
+              <div class="domain-name-text">firstname@freeholdfinance.com.au</div>
+              <div class="domain-note">Standard format for all staff</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS CARD -->
+  <section class="section-wrap" id="businesscard">
+    <span class="section-number">08 — Applications</span>
+    <h2 class="section-title">Business card</h2>
+    <p class="section-desc">Standard business card dimensions: 90mm × 55mm. Print on 400gsm uncoated or soft-touch laminate stock. The navy front conveys authority; the gold back makes an unforgettable first impression.</p>
+
+    <div class="card-stage mb-4">
+      <div>
+        <div class="card-label">Front</div>
+        <div class="biz-card">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <svg width="34" height="34" viewBox="0 0 28 28">
+              <polygon points="14,2 24,10 24,26 4,26 4,10" fill="none" stroke="#F7B600" stroke-width="1.5"/>
+              <rect x="9" y="16" width="10" height="10" rx="1" fill="#F7B600"/>
+            </svg>
+            <div>
+              <div style="font-family:'Playfair Display',serif;font-size:17px;color:#fff;font-weight:500;">Freehold</div>
+              <div style="font-family:'DM Sans',sans-serif;font-size:8px;color:var(--gold);letter-spacing:0.22em;margin-top:1px;">FINANCE</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;color:#fff;">Anup Shrestha</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(247,182,0,0.85);margin-top:2px;">Founder &amp; Director · Mortgage Broker</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.6);margin-top:10px;line-height:1.9;">
+              anup@freeholdfinance.com.au<br>
+              freeholdfinance.com.au<br>
+              Brisbane, Queensland
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card-label">Back</div>
+        <div class="biz-card-back">
+          <div style="position:absolute;top:16px;right:20px;font-family:'Playfair Display',serif;font-size:80px;font-weight:600;color:rgba(26,31,113,0.08);line-height:1;user-select:none;">FF</div>
+          <div></div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);font-weight:500;">Own it.</div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);font-weight:500;">For real.</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:9px;color:rgba(26,31,113,0.55);letter-spacing:0.16em;margin-top:10px;text-transform:uppercase;">Mortgage Brokerage · Brisbane</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:11px;color:var(--navy);font-weight:500;margin-top:8px;">freeholdfinance.com.au</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="info-box">
+          <strong>Print specs:</strong> 90 × 55mm · 400gsm uncoated · CMYK colours: Navy CMYK 100, 83, 0, 33 · Gold CMYK 0, 26, 100, 3 · 3mm bleed on all sides · Soft-touch laminate recommended for premium feel.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="gold-box">
+          <strong>Typography on card:</strong> Name in DM Sans 500 · Title in DM Sans 400 · Details in DM Sans 300 · Brand name in Playfair Display 500 · "FINANCE" in DM Sans 500 tracked caps.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOMEPAGE -->
+  <section class="section-wrap" id="homepage">
+    <span class="section-number">09 — Applications</span>
+    <h2 class="section-title">Homepage mockup</h2>
+    <p class="section-desc">A reference layout for the primary website. The design follows a full-width navy hero with gold accents, transitioning to white content sections. This mockup is directional — final design to be developed by a web designer.</p>
+
+    <div class="browser-frame mb-4">
+      <div class="browser-bar">
+        <div class="browser-dot" style="background:#ff5f57;"></div>
+        <div class="browser-dot" style="background:#febc2e;"></div>
+        <div class="browser-dot" style="background:#28c840;"></div>
+        <div class="browser-url">freeholdfinance.com.au</div>
+      </div>
+
+      <div class="site-nav-mock">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <svg width="26" height="26" viewBox="0 0 28 28">
+            <polygon points="14,2 24,10 24,26 4,26 4,10" fill="none" stroke="#F7B600" stroke-width="1.5"/>
+            <rect x="9" y="16" width="10" height="10" rx="1" fill="#F7B600"/>
+          </svg>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:14px;color:#fff;font-weight:500;">Freehold</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:7px;color:var(--gold);letter-spacing:0.22em;">FINANCE</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:20px;">
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(255,255,255,0.7);">Home loans</span>
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(255,255,255,0.7);">Refinance</span>
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(255,255,255,0.7);">Invest</span>
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(255,255,255,0.7);">About</span>
+        </div>
+        <div style="background:var(--gold);color:var(--navy);font-size:12px;font-weight:500;padding:7px 16px;border-radius:7px;font-family:'DM Sans',sans-serif;cursor:default;">Get started</div>
+      </div>
+
+      <div class="hero-mock">
+        <div class="hero-eyebrow">Mortgage brokerage · Brisbane, Australia</div>
+        <div class="hero-headline">Your path to <span>full ownership</span> starts here</div>
+        <div class="hero-sub">We help first home buyers, investors and refinancers access 40+ lenders — with zero broker fees and approval in as little as 24 hours.</div>
+        <div>
+          <span class="btn-primary-mock">Get a free assessment</span>
+          <span class="btn-sec-mock">How it works</span>
+        </div>
+        <div class="hero-stats-row">
+          <div><div class="stat-val">40+</div><div class="stat-lab">Lenders</div></div>
+          <div><div class="stat-val">$0</div><div class="stat-lab">Broker fee</div></div>
+          <div><div class="stat-val">24hr</div><div class="stat-lab">Pre-approval</div></div>
+          <div><div class="stat-val">500+</div><div class="stat-lab">Settled loans</div></div>
+        </div>
+      </div>
+
+      <div class="services-mock">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--navy);">What we do</div>
+        <div class="services-grid-mock">
+          <div class="service-card-mock">
+            <div class="service-icon-mock"></div>
+            <div class="service-name-mock">First home buyers</div>
+            <div class="service-desc-mock">We guide you through every step to your first property.</div>
+          </div>
+          <div class="service-card-mock">
+            <div class="service-icon-mock"></div>
+            <div class="service-name-mock">Refinancing</div>
+            <div class="service-desc-mock">Switch to a better rate and save thousands.</div>
+          </div>
+          <div class="service-card-mock">
+            <div class="service-icon-mock"></div>
+            <div class="service-name-mock">Property investors</div>
+            <div class="service-desc-mock">Grow your portfolio with the right lending strategy.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-strip-mock">
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-size:15px;color:var(--navy);">Ready to own it for real?</div>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(26,31,113,0.6);margin-top:2px;">Free consultation · No obligation · Brisbane based</div>
+        </div>
+        <div style="background:var(--navy);color:#fff;font-size:12px;font-weight:500;padding:10px 18px;border-radius:8px;font-family:'DM Sans',sans-serif;cursor:default;">Book a call</div>
+      </div>
+
+      <div class="site-footer-mock">
+        <div style="font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.35);">© 2026 Freehold Finance Pty Ltd · ACL [Number] · ABN [Number]</div>
+        <div style="display:flex;gap:16px;">
+          <span style="font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.4);">Privacy</span>
+          <span style="font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.4);">Disclaimer</span>
+          <span style="font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.4);">Contact</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <strong>Web implementation notes:</strong> Primary font stack: 'Playfair Display', Georgia, serif for headings · 'DM Sans', system-ui, sans-serif for body · Minimum body font size 14px · Line height 1.7 for body copy · Mobile-first responsive design with breakpoints at 768px and 1200px.
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    <p>Freehold Finance Brand Style Guide · Version 1.0 · Prepared for Anup Shrestha · © 2026 Freehold Finance Pty Ltd</p>
+    <p>Confidential — not for public distribution</p>
+  </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const navLinks = document.querySelectorAll('.sidebar-nav a');
+  const sections = document.querySelectorAll('section[id], div.doc-footer');
+
+  function setActive() {
+    let current = '';
+    document.querySelectorAll('section[id]').forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 80) current = sec.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  }
+
+  window.addEventListener('scroll', setActive);
+  setActive();
+
+  navLinks.forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+</body>
+</html>
